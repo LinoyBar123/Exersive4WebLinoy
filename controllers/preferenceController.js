@@ -52,7 +52,6 @@ exports.calculateResults = async (req, res) => {
             vacationTypeCounts[a] > vacationTypeCounts[b] ? a : b
         );
 
-        // קביעת תאריכים חופפים
         let finalStartDate = dateRanges[0].startDate;
         let finalEndDate = dateRanges[0].endDate;
 
@@ -61,7 +60,6 @@ exports.calculateResults = async (req, res) => {
             finalEndDate = new Date(Math.min(finalEndDate, range.endDate));
         });
 
-        // אם אין חפיפה
         if (finalStartDate > finalEndDate) {
             return res.status(400).json({ message: 'No overlapping dates available for all preferences.' });
         }
