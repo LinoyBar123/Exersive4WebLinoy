@@ -44,12 +44,10 @@ exports.calculateResults = async (req, res) => {
             dateRanges.push({ startDate: new Date(pref.startDate), endDate: new Date(pref.endDate) });
         });
 
-        // קביעת יעד לפי רוב
         const selectedDestination = Object.keys(destinationCounts).reduce((a, b) => 
             destinationCounts[a] > destinationCounts[b] ? a : b
         );
 
-        // קביעת סוג חופשה לפי רוב
         const selectedVacationType = Object.keys(vacationTypeCounts).reduce((a, b) => 
             vacationTypeCounts[a] > vacationTypeCounts[b] ? a : b
         );
