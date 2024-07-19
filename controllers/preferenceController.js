@@ -40,8 +40,6 @@ exports.calculateResults = async (req, res) => {
 
         preferences.forEach(pref => {
             destinationCounts[pref.destination] = (destinationCounts[pref.destination] || 0) + 1;
-
-            // ספירת סוגי חופשה
             vacationTypeCounts[pref.vacationType] = (vacationTypeCounts[pref.vacationType] || 0) + 1;
 
             // הוספת תאריכים לרשימה
