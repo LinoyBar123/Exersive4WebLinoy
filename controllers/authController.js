@@ -23,7 +23,7 @@ exports.loginUser = (req, res) => {
         }
         
         const user = results[0];
-        if (user.password !== password) {  // יש לוודא שהשוואת הסיסמאות מתבצעת בצורה מאובטחת
+        if (user.password !== password) {  
             return res.status(401).json({ message: 'Invalid credentials' });
         }
         
