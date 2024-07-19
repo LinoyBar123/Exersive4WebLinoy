@@ -41,8 +41,6 @@ exports.calculateResults = async (req, res) => {
         preferences.forEach(pref => {
             destinationCounts[pref.destination] = (destinationCounts[pref.destination] || 0) + 1;
             vacationTypeCounts[pref.vacationType] = (vacationTypeCounts[pref.vacationType] || 0) + 1;
-
-            // הוספת תאריכים לרשימה
             dateRanges.push({ startDate: new Date(pref.startDate), endDate: new Date(pref.endDate) });
         });
 
