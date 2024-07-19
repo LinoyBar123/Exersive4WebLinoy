@@ -39,7 +39,6 @@ exports.calculateResults = async (req, res) => {
         const dateRanges = [];
 
         preferences.forEach(pref => {
-            // ספירת יעדים
             destinationCounts[pref.destination] = (destinationCounts[pref.destination] || 0) + 1;
 
             // ספירת סוגי חופשה
