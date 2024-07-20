@@ -16,7 +16,7 @@ const verifyAccessCode = (req, res, next) => {
             return res.status(403).json({ message: 'Invalid access code' });
         }
 
-        next(); // אם הכל בסדר, נמשיך לפונקציה הבאה
+        next();
     });
 };
 
